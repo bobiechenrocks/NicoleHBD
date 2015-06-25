@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		6897B76A1B3A846300C79DE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897B7691B3A846300C79DE2 /* main.m */; };
 		6897B76D1B3A846300C79DE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897B76C1B3A846300C79DE2 /* AppDelegate.m */; };
-		6897B7701B3A846300C79DE2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897B76F1B3A846300C79DE2 /* ViewController.m */; };
 		6897B7731B3A846300C79DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6897B7711B3A846300C79DE2 /* Main.storyboard */; };
 		6897B7751B3A846300C79DE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6897B7741B3A846300C79DE2 /* Images.xcassets */; };
 		6897B7781B3A846300C79DE2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6897B7761B3A846300C79DE2 /* LaunchScreen.xib */; };
 		6897B7841B3A846300C79DE2 /* NicoleHBDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897B7831B3A846300C79DE2 /* NicoleHBDTests.m */; };
+		68CCA8291B3BC795004E9B49 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCA8281B3BC795004E9B49 /* MainViewController.m */; };
+		68CCA82C1B3BCC01004E9B49 /* HollowCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCA82B1B3BCC01004E9B49 /* HollowCircleView.m */; };
+		68CCA82F1B3BCD38004E9B49 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCA82E1B3BCD38004E9B49 /* Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		6897B7691B3A846300C79DE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6897B76B1B3A846300C79DE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6897B76C1B3A846300C79DE2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6897B76E1B3A846300C79DE2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6897B76F1B3A846300C79DE2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6897B7721B3A846300C79DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6897B7741B3A846300C79DE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6897B7771B3A846300C79DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6897B77D1B3A846300C79DE2 /* NicoleHBDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicoleHBDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6897B7821B3A846300C79DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6897B7831B3A846300C79DE2 /* NicoleHBDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NicoleHBDTests.m; sourceTree = "<group>"; };
+		68CCA8271B3BC795004E9B49 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		68CCA8281B3BC795004E9B49 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		68CCA82A1B3BCC01004E9B49 /* HollowCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HollowCircleView.h; sourceTree = "<group>"; };
+		68CCA82B1B3BCC01004E9B49 /* HollowCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HollowCircleView.m; sourceTree = "<group>"; };
+		68CCA82D1B3BCD38004E9B49 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		68CCA82E1B3BCD38004E9B49 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,12 @@
 			children = (
 				6897B76B1B3A846300C79DE2 /* AppDelegate.h */,
 				6897B76C1B3A846300C79DE2 /* AppDelegate.m */,
-				6897B76E1B3A846300C79DE2 /* ViewController.h */,
-				6897B76F1B3A846300C79DE2 /* ViewController.m */,
+				68CCA8271B3BC795004E9B49 /* MainViewController.h */,
+				68CCA8281B3BC795004E9B49 /* MainViewController.m */,
+				68CCA82A1B3BCC01004E9B49 /* HollowCircleView.h */,
+				68CCA82B1B3BCC01004E9B49 /* HollowCircleView.m */,
+				68CCA82D1B3BCD38004E9B49 /* Utilities.h */,
+				68CCA82E1B3BCD38004E9B49 /* Utilities.m */,
 				6897B7711B3A846300C79DE2 /* Main.storyboard */,
 				6897B7741B3A846300C79DE2 /* Images.xcassets */,
 				6897B7761B3A846300C79DE2 /* LaunchScreen.xib */,
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6897B7701B3A846300C79DE2 /* ViewController.m in Sources */,
 				6897B76D1B3A846300C79DE2 /* AppDelegate.m in Sources */,
 				6897B76A1B3A846300C79DE2 /* main.m in Sources */,
+				68CCA82C1B3BCC01004E9B49 /* HollowCircleView.m in Sources */,
+				68CCA8291B3BC795004E9B49 /* MainViewController.m in Sources */,
+				68CCA82F1B3BCD38004E9B49 /* Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +430,7 @@
 				6897B7891B3A846300C79DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6897B78A1B3A846300C79DE2 /* Build configuration list for PBXNativeTarget "NicoleHBDTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +439,7 @@
 				6897B78C1B3A846300C79DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
