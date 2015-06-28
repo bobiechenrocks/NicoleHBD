@@ -16,6 +16,11 @@
 		68CCA8291B3BC795004E9B49 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCA8281B3BC795004E9B49 /* MainViewController.m */; };
 		68CCA82C1B3BCC01004E9B49 /* HollowCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCA82B1B3BCC01004E9B49 /* HollowCircleView.m */; };
 		68CCA82F1B3BCD38004E9B49 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCA82E1B3BCD38004E9B49 /* Utilities.m */; };
+		68CCA8371B3FD63F004E9B49 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CCA8311B3FD63F004E9B49 /* Bolts.framework */; };
+		68CCA8381B3FD63F004E9B49 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CCA8321B3FD63F004E9B49 /* Parse.framework */; };
+		68CCA83E1B3FD7CD004E9B49 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CCA83D1B3FD7CD004E9B49 /* libsqlite3.dylib */; };
+		68CCA8401B3FD80D004E9B49 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CCA83F1B3FD80D004E9B49 /* SystemConfiguration.framework */; };
+		68CCA8441B3FD8DC004E9B49 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CCA8431B3FD8DC004E9B49 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,12 @@
 		68CCA82B1B3BCC01004E9B49 /* HollowCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HollowCircleView.m; sourceTree = "<group>"; };
 		68CCA82D1B3BCD38004E9B49 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		68CCA82E1B3BCD38004E9B49 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		68CCA8311B3FD63F004E9B49 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ParseSDK/Bolts.framework; sourceTree = "<group>"; };
+		68CCA8321B3FD63F004E9B49 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ParseSDK/Parse.framework; sourceTree = "<group>"; };
+		68CCA83D1B3FD7CD004E9B49 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		68CCA83F1B3FD80D004E9B49 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		68CCA8411B3FD823004E9B49 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		68CCA8431B3FD8DC004E9B49 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68CCA8441B3FD8DC004E9B49 /* AudioToolbox.framework in Frameworks */,
+				68CCA8401B3FD80D004E9B49 /* SystemConfiguration.framework in Frameworks */,
+				68CCA83E1B3FD7CD004E9B49 /* libsqlite3.dylib in Frameworks */,
+				68CCA8381B3FD63F004E9B49 /* Parse.framework in Frameworks */,
+				68CCA8371B3FD63F004E9B49 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +85,12 @@
 		6897B75B1B3A846300C79DE2 = {
 			isa = PBXGroup;
 			children = (
+				68CCA8431B3FD8DC004E9B49 /* AudioToolbox.framework */,
+				68CCA8411B3FD823004E9B49 /* CFNetwork.framework */,
+				68CCA83F1B3FD80D004E9B49 /* SystemConfiguration.framework */,
 				6897B7661B3A846300C79DE2 /* NicoleHBD */,
 				6897B7801B3A846300C79DE2 /* NicoleHBDTests */,
+				68CCA8301B3FD628004E9B49 /* ParseSDK */,
 				6897B7651B3A846300C79DE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +147,16 @@
 				6897B7821B3A846300C79DE2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68CCA8301B3FD628004E9B49 /* ParseSDK */ = {
+			isa = PBXGroup;
+			children = (
+				68CCA83D1B3FD7CD004E9B49 /* libsqlite3.dylib */,
+				68CCA8311B3FD63F004E9B49 /* Bolts.framework */,
+				68CCA8321B3FD63F004E9B49 /* Parse.framework */,
+			);
+			name = ParseSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +391,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ParseSDK",
+				);
 				INFOPLIST_FILE = NicoleHBD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -371,7 +406,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ParseSDK",
+				);
 				INFOPLIST_FILE = NicoleHBD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
