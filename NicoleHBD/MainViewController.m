@@ -45,7 +45,6 @@ NSString* const kBirthdayJsonKeyWords = @"words";
 
 - (void)prepareMainView {
     [self.view setBackgroundColor:[Utilities colorWithHex:0xfacade]];
-    [self.baseScroll setContentOffset:CGPointZero];
     [self.baseScroll setPagingEnabled:YES];
     [self.baseScroll setBounces:NO];
     [self.baseScroll setShowsHorizontalScrollIndicator:NO];

@@ -47,6 +47,7 @@
                             <constraint firstAttribute="centerX" secondItem="lJE-oU-j7U" secondAttribute="centerX" id="z5E-l7-HAG"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="RnT-PY-DEx"/>
                     <connections>
                         <outlet property="baseScroll" destination="lJE-oU-j7U" id="FZg-Zh-jjO"/>

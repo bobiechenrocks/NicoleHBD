@@ -30,8 +30,6 @@
 		68D38DA41B43BAFE009F1511 /* BypassTouchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D38DA31B43BAFE009F1511 /* BypassTouchImageView.m */; };
 		68D38DA71B43BEA3009F1511 /* james_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DA51B43BEA3009F1511 /* james_full.jpg */; };
 		68D38DA81B43BEA3009F1511 /* james_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DA61B43BEA3009F1511 /* james_thumb.jpg */; };
-		68D38DB31B43C44B009F1511 /* janet_full.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DA91B43C44B009F1511 /* janet_full.JPG */; };
-		68D38DB41B43C44B009F1511 /* janet_thumb.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DAA1B43C44B009F1511 /* janet_thumb.JPG */; };
 		68D38DB51B43C44B009F1511 /* pat_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DAB1B43C44B009F1511 /* pat_full.jpg */; };
 		68D38DB61B43C44B009F1511 /* pat_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DAC1B43C44B009F1511 /* pat_thumb.jpg */; };
 		68D38DB71B43C44B009F1511 /* sasalu_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DAD1B43C44B009F1511 /* sasalu_full.jpg */; };
@@ -40,6 +38,8 @@
 		68D38DBA1B43C44B009F1511 /* YY_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DB01B43C44B009F1511 /* YY_thumb.jpg */; };
 		68D38DBB1B43C44B009F1511 /* 雄_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DB11B43C44B009F1511 /* 雄_full.jpg */; };
 		68D38DBC1B43C44B009F1511 /* 雄_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DB21B43C44B009F1511 /* 雄_thumb.jpg */; };
+		68D38DBF1B43D9C6009F1511 /* janet_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DBD1B43D9C6009F1511 /* janet_full.jpg */; };
+		68D38DC01B43D9C6009F1511 /* janet_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DBE1B43D9C6009F1511 /* janet_thumb.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +87,6 @@
 		68D38DA31B43BAFE009F1511 /* BypassTouchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BypassTouchImageView.m; sourceTree = "<group>"; };
 		68D38DA51B43BEA3009F1511 /* james_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = james_full.jpg; path = BirthdayPics/james_full.jpg; sourceTree = "<group>"; };
 		68D38DA61B43BEA3009F1511 /* james_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = james_thumb.jpg; path = BirthdayPics/james_thumb.jpg; sourceTree = "<group>"; };
-		68D38DA91B43C44B009F1511 /* janet_full.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = janet_full.JPG; path = BirthdayPics/janet_full.JPG; sourceTree = "<group>"; };
-		68D38DAA1B43C44B009F1511 /* janet_thumb.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = janet_thumb.JPG; path = BirthdayPics/janet_thumb.JPG; sourceTree = "<group>"; };
 		68D38DAB1B43C44B009F1511 /* pat_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pat_full.jpg; path = BirthdayPics/pat_full.jpg; sourceTree = "<group>"; };
 		68D38DAC1B43C44B009F1511 /* pat_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pat_thumb.jpg; path = BirthdayPics/pat_thumb.jpg; sourceTree = "<group>"; };
 		68D38DAD1B43C44B009F1511 /* sasalu_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sasalu_full.jpg; path = BirthdayPics/sasalu_full.jpg; sourceTree = "<group>"; };
@@ -97,6 +95,8 @@
 		68D38DB01B43C44B009F1511 /* YY_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = YY_thumb.jpg; path = BirthdayPics/YY_thumb.jpg; sourceTree = "<group>"; };
 		68D38DB11B43C44B009F1511 /* 雄_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "雄_full.jpg"; path = "BirthdayPics/雄_full.jpg"; sourceTree = "<group>"; };
 		68D38DB21B43C44B009F1511 /* 雄_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "雄_thumb.jpg"; path = "BirthdayPics/雄_thumb.jpg"; sourceTree = "<group>"; };
+		68D38DBD1B43D9C6009F1511 /* janet_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = janet_full.jpg; path = BirthdayPics/janet_full.jpg; sourceTree = "<group>"; };
+		68D38DBE1B43D9C6009F1511 /* janet_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = janet_thumb.jpg; path = BirthdayPics/janet_thumb.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,8 +214,8 @@
 				68D38D9B1B427E07009F1511 /* york_thumb.jpg */,
 				68D38DA51B43BEA3009F1511 /* james_full.jpg */,
 				68D38DA61B43BEA3009F1511 /* james_thumb.jpg */,
-				68D38DA91B43C44B009F1511 /* janet_full.JPG */,
-				68D38DAA1B43C44B009F1511 /* janet_thumb.JPG */,
+				68D38DBD1B43D9C6009F1511 /* janet_full.jpg */,
+				68D38DBE1B43D9C6009F1511 /* janet_thumb.jpg */,
 				68D38DAB1B43C44B009F1511 /* pat_full.jpg */,
 				68D38DAC1B43C44B009F1511 /* pat_thumb.jpg */,
 				68D38DAD1B43C44B009F1511 /* sasalu_full.jpg */,
@@ -309,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6897B7731B3A846300C79DE2 /* Main.storyboard in Resources */,
+				68D38DBF1B43D9C6009F1511 /* janet_full.jpg in Resources */,
 				68D38DB51B43C44B009F1511 /* pat_full.jpg in Resources */,
 				68D38DB61B43C44B009F1511 /* pat_thumb.jpg in Resources */,
 				68D38DA81B43BEA3009F1511 /* james_thumb.jpg in Resources */,
@@ -324,10 +325,9 @@
 				68D38DBA1B43C44B009F1511 /* YY_thumb.jpg in Resources */,
 				68D38DBB1B43C44B009F1511 /* 雄_full.jpg in Resources */,
 				6897B7751B3A846300C79DE2 /* Images.xcassets in Resources */,
-				68D38DB31B43C44B009F1511 /* janet_full.JPG in Resources */,
 				68D38DA71B43BEA3009F1511 /* james_full.jpg in Resources */,
-				68D38DB41B43C44B009F1511 /* janet_thumb.JPG in Resources */,
 				68D38DB91B43C44B009F1511 /* YY_full.jpg in Resources */,
+				68D38DC01B43D9C6009F1511 /* janet_thumb.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
