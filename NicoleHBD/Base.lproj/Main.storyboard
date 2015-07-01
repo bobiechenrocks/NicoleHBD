@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RFS-hN-VD2">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -17,26 +19,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJE-oU-j7U">
-                                <rect key="frame" x="160" y="160" width="280" height="280"/>
+                                <rect key="frame" x="160" y="120" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="YOK-Lq-VBE"/>
                                     <constraint firstAttribute="height" constant="280" id="yRm-Yt-izo"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="soE-1b-kNh" userLabel="Hollow Circle View" customClass="HollowCircleView">
-                                <rect key="frame" x="160" y="160" width="280" height="280"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="soE-1b-kNh" userLabel="Hollow Circle View" customClass="BypassTouchImageView">
+                                <rect key="frame" x="160" y="120" width="280" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="FRv-85-FPM"/>
                                     <constraint firstAttribute="width" constant="280" id="e9m-Th-ddJ"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wmn-z7-cfA">
+                                <rect key="frame" x="547" y="28" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="soE-1b-kNh" secondAttribute="centerY" id="2Bu-ac-Vf2"/>
+                            <constraint firstAttribute="centerY" secondItem="soE-1b-kNh" secondAttribute="centerY" constant="40" id="2Bu-ac-Vf2"/>
                             <constraint firstAttribute="centerX" secondItem="soE-1b-kNh" secondAttribute="centerX" id="esh-55-wvc"/>
-                            <constraint firstAttribute="centerY" secondItem="lJE-oU-j7U" secondAttribute="centerY" id="rHF-I3-GFi"/>
+                            <constraint firstItem="wmn-z7-cfA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="hpL-Re-QlD"/>
+                            <constraint firstItem="wmn-z7-cfA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iH6-Fl-Ued"/>
+                            <constraint firstAttribute="centerY" secondItem="lJE-oU-j7U" secondAttribute="centerY" constant="40" id="rHF-I3-GFi"/>
                             <constraint firstAttribute="centerX" secondItem="lJE-oU-j7U" secondAttribute="centerX" id="z5E-l7-HAG"/>
                         </constraints>
                     </view>
@@ -44,6 +51,7 @@
                     <connections>
                         <outlet property="baseScroll" destination="lJE-oU-j7U" id="FZg-Zh-jjO"/>
                         <outlet property="hollowCircleView" destination="soE-1b-kNh" id="NkY-AV-ifo"/>
+                        <outlet property="loadingIndicator" destination="wmn-z7-cfA" id="HbG-2o-y98"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

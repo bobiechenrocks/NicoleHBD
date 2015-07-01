@@ -12,5 +12,6 @@
 @interface Utilities : NSObject
 
 + (UIColor*)colorWithHex:(NSUInteger)colorCode;
++ (UIColor*)colorWithHex:(NSUInteger)colorCode alpha:(CGFloat)alpha;
 
 @end
