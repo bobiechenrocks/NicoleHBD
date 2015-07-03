@@ -27,7 +27,19 @@
 }
 
 - (void)startFetchingImage:(NSString*)url {
-    
+    NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]
+                                             cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:5.0f];
+    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (!connectionError) {
+            NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+            if (httpResponse.statusCode == 200) {
+                UIImage* image = [[UIImage alloc] initWithData:data];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.image = image;
+                });
+            }
+        }
+    }];
 }
 
 @end

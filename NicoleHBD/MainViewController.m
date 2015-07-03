@@ -10,6 +10,7 @@
 #import "Utilities.h"
 #import "BCWebImageView.h"
 #import "BypassTouchImageView.h"
+#import "PicsCollectionViewController.h"
 
 NSString* const kBirthdayJsonUrl = @"http://bobiechenrocks.appspot.com/nicoleBirthdayJSON";
 NSString* const kBirthdayJsonKey = @"birthdayJson";
@@ -18,11 +19,12 @@ NSString* const kBirthdayJsonKeyPic = @"pic";
 NSString* const kBirthdayJsonKeyPicUrl = @"pic_url";
 NSString* const kBirthdayJsonKeyWords = @"words";
 
-@interface MainViewController ()
+@interface MainViewController () <PicsCollectionDelegate>
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
 @property (weak, nonatomic) IBOutlet UIScrollView *baseScroll;
 @property (weak, nonatomic) IBOutlet BypassTouchImageView *hollowCircleView;
+@property (weak, nonatomic) IBOutlet UIButton *galleryButton;
 
 @property (strong, nonatomic) NSDictionary* birthdayJson;
 
@@ -53,6 +55,24 @@ NSString* const kBirthdayJsonKeyWords = @"words";
     self.hollowCircleView.backgroundColor = [UIColor clearColor];
     self.hollowCircleView.image = [UIImage imageNamed:@"facade_circle.png"];
     self.hollowCircleView.bypassParent = self.baseScroll;
+    
+    CGFloat circle1size = 290.0f, circle2size = 275.0f;
+    CGFloat circle1origin = (self.hollowCircleView.frame.size.width - circle1size)/2.0f;
+    BypassTouchImageView* circle1 = [[BypassTouchImageView alloc] initWithFrame:CGRectMake(circle1origin, circle1origin, circle1size, circle1size)];
+    [self.hollowCircleView addSubview:circle1];
+    [circle1 setBackgroundColor:[UIColor clearColor]];
+    [circle1.layer setCornerRadius:circle1size/2.0f];
+    [circle1.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [circle1.layer setBorderWidth:5.0f];
+    
+    CGFloat circle2origin = (self.hollowCircleView.frame.size.width - circle2size)/2.0f;
+    BypassTouchImageView* circle2 = [[BypassTouchImageView alloc] initWithFrame:CGRectMake(circle2origin, circle2origin, circle2size, circle2size)];
+    [self.hollowCircleView addSubview:circle2];
+    [circle2 setBackgroundColor:[UIColor clearColor]];
+    [circle2.layer setCornerRadius:circle2size/2.0f];
+    [circle2.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [circle2.layer setBorderWidth:8.0f];
+
 }
 
 - (void)prepareBirthdayJSON {
@@ -142,6 +162,18 @@ NSString* const kBirthdayJsonKeyWords = @"words";
         
         [self.baseScroll setContentSize:CGSizeMake(count*self.baseScroll.frame.size.width, self.baseScroll.frame.size.height)];
     }
+}
+
+- (NSArray*)providePicsAndWishes {
+    return self.birthdayJson[kBirthdayJsonKeyWishes];
+}
+
+#pragma mark - UI actions
+- (IBAction)galleryButtonClicked:(id)sender {
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    PicsCollectionViewController* picsVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"PicsCollectionViewController"];
+    picsVC.picsAndWishes = self.birthdayJson[kBirthdayJsonKeyWishes];
+    [self.navigationController pushViewController:picsVC animated:YES];
 }
 
 @end
