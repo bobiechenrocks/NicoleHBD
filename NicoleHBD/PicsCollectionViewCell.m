@@ -19,26 +19,11 @@
 @implementation PicsCollectionViewCell
 
 - (void)preparePicImage {
-    BOOL bPicNotReady = NO;
-    if ([self.picName length] > 0) {
-        UIImage* image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg", self.picName]];
-        if (!image) {
-            bPicNotReady = YES;
-        }
-        else {
-            CGFloat size = self.frame.size.width;
-            self.picImage = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, size, size)];
-            self.picImage.image = image;
-            [self addSubview:self.picImage];
-            return;
-        }
-    }
-    
-    if (bPicNotReady && [self.picThumbUrl length] > 0) {
-        CGFloat size = self.frame.size.width;
-        self.picImageFromUrl = [[BCWebImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, size, size) andUrl:self.picThumbUrl];
-        [self addSubview:self.picImageFromUrl];
-    }
+    CGFloat size = self.frame.size.width;
+    self.picImageFromUrl = [[BCWebImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, size, size)
+                                                        filename:[NSString stringWithFormat:@"%@_thumb.jpg", self.picName]
+                                                             url:self.picThumbUrl];
+    [self addSubview:self.picImageFromUrl];
 }
 
 @end

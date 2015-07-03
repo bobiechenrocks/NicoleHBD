@@ -16,11 +16,25 @@
 
 @implementation BCWebImageView
 
-- (BCWebImageView*)initWithFrame:(CGRect)frame andUrl:(NSString*)url {
+- (BCWebImageView*)initWithFrame:(CGRect)frame filename:(NSString *)filename url:(NSString *)url {
     if (self = [super initWithFrame:frame]) {
         self.loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
         [self addSubview:self.loadingIndicator];
-        [self startFetchingImage:url];
+
+        BOOL bPicNotReady = NO;
+        if ([filename length] > 0) {
+            UIImage* image = [UIImage imageNamed:filename];
+            if (!image) {
+                bPicNotReady = YES;
+            }
+            else {
+                self.image = image;
+            }
+        }
+        
+        if (bPicNotReady && [url length] > 0) {
+            [self startFetchingImage:url];
+        }
     }
     
     return self;
@@ -30,6 +44,7 @@
     NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]
                                              cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:5.0f];
     [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        self.loadingIndicator.hidden = YES;
         if (!connectionError) {
             NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
             if (httpResponse.statusCode == 200) {

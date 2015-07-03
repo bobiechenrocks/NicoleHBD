@@ -10,6 +10,6 @@
 
 @interface BCWebImageView : UIImageView
 
-- (BCWebImageView*)initWithFrame:(CGRect)frame andUrl:(NSString*)url;
+- (BCWebImageView*)initWithFrame:(CGRect)frame filename:(NSString*)filename url:(NSString*)url;
 
 @end

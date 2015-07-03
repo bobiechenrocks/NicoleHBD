@@ -11,20 +11,17 @@
 #import "BCWebImageView.h"
 #import "BypassTouchImageView.h"
 #import "PicsCollectionViewController.h"
+#import "ZoomZoomPicView.h"
+#import "Definitions.h"
 
-NSString* const kBirthdayJsonUrl = @"http://bobiechenrocks.appspot.com/nicoleBirthdayJSON";
-NSString* const kBirthdayJsonKey = @"birthdayJson";
-NSString* const kBirthdayJsonKeyWishes = @"wishes";
-NSString* const kBirthdayJsonKeyPic = @"pic";
-NSString* const kBirthdayJsonKeyPicUrl = @"pic_url";
-NSString* const kBirthdayJsonKeyWords = @"words";
-
-@interface MainViewController () <PicsCollectionDelegate>
+@interface MainViewController ()
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
 @property (weak, nonatomic) IBOutlet UIScrollView *baseScroll;
 @property (weak, nonatomic) IBOutlet BypassTouchImageView *hollowCircleView;
 @property (weak, nonatomic) IBOutlet UIButton *galleryButton;
+
+@property (strong, nonatomic) ZoomZoomPicView* zoomInPicView;
 
 @property (strong, nonatomic) NSDictionary* birthdayJson;
 
@@ -51,6 +48,10 @@ NSString* const kBirthdayJsonKeyWords = @"words";
     [self.baseScroll setBounces:NO];
     [self.baseScroll setShowsHorizontalScrollIndicator:NO];
     [self.baseScroll setShowsVerticalScrollIndicator:NO];
+    UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapOnThumb:)];
+    singleTap.numberOfTapsRequired = 1;
+    singleTap.numberOfTouchesRequired = 1;
+    [self.baseScroll addGestureRecognizer:singleTap];
     
     self.hollowCircleView.backgroundColor = [UIColor clearColor];
     self.hollowCircleView.image = [UIImage imageNamed:@"facade_circle.png"];
@@ -153,7 +154,8 @@ NSString* const kBirthdayJsonKeyWords = @"words";
             
             if (bInvalidPicName && [picUrl length] > 0) {
                 CGFloat baseScrollSize = self.baseScroll.frame.size.width;
-                BCWebImageView* picImageview = [[BCWebImageView alloc] initWithFrame:CGRectMake(count*baseScrollSize, 0.0f, baseScrollSize, baseScrollSize) andUrl:picUrl];
+                BCWebImageView* picImageview = [[BCWebImageView alloc] initWithFrame:CGRectMake(count*baseScrollSize, 0.0f, baseScrollSize, baseScrollSize)
+                                                                            filename:nil url:picUrl];
                 [self.baseScroll addSubview:picImageview];
             }
             
@@ -164,8 +166,8 @@ NSString* const kBirthdayJsonKeyWords = @"words";
     }
 }
 
-- (NSArray*)providePicsAndWishes {
-    return self.birthdayJson[kBirthdayJsonKeyWishes];
+- (void)handleTapOnThumb:(UIGestureRecognizer*)recognizer {
+    [self zoomInButtonClicked:nil];
 }
 
 #pragma mark - UI actions
@@ -174,6 +176,28 @@ NSString* const kBirthdayJsonKeyWords = @"words";
     PicsCollectionViewController* picsVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"PicsCollectionViewController"];
     picsVC.picsAndWishes = self.birthdayJson[kBirthdayJsonKeyWishes];
     [self.navigationController pushViewController:picsVC animated:YES];
+}
+
+- (IBAction)zoomInButtonClicked:(id)sender {
+    if (!self.zoomInPicView) {
+        self.zoomInPicView = [[ZoomZoomPicView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height)];
+    }
+    
+    self.zoomInPicView.alpha = 0.0f;
+    self.zoomInPicView.hidden = NO;
+    [self.view addSubview:self.zoomInPicView];
+    
+    NSUInteger currentScrollIndex = (NSUInteger)((self.baseScroll.contentOffset.x + self.baseScroll.frame.size.width - 1.0f) / self.baseScroll.frame.size.width);
+    if (currentScrollIndex < [self.birthdayJson[kBirthdayJsonKeyWishes] count]) {
+        NSDictionary* wish = self.birthdayJson[kBirthdayJsonKeyWishes][currentScrollIndex];
+        NSString* filename = [NSString stringWithFormat:@"%@_full.jpg", wish[kBirthdayJsonKeyPic]];
+        NSString* url = wish[kBirthdayJsonKeyPicUrl];
+        [self.zoomInPicView preparePicView:filename url:url];
+    }
+    
+    [UIView animateWithDuration:0.25f animations:^{
+        self.zoomInPicView.alpha = 1.0f;
+    }];
 }
 
 @end

@@ -9,6 +9,14 @@
 #import "PicsCollectionViewController.h"
 #import "Utilities.h"
 #import "PicsCollectionViewCell.h"
+#import "ZoomZoomPicView.h"
+#import "Definitions.h"
+
+@interface PicsCollectionViewController ()
+
+@property (strong, nonatomic) ZoomZoomPicView* zoomInPicView;
+
+@end
 
 @implementation PicsCollectionViewController
 
@@ -86,6 +94,27 @@ static NSString * const reuseIdentifier = @"Cell";
     return CGSizeMake(size, size);
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (!self.zoomInPicView) {
+        self.zoomInPicView = [[ZoomZoomPicView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height)];
+    }
+    
+    self.zoomInPicView.alpha = 0.0f;
+    self.zoomInPicView.hidden = NO;
+    [self.view addSubview:self.zoomInPicView];
+    
+    if (indexPath.row < [self.picsAndWishes count]) {
+        NSDictionary* wish = self.picsAndWishes[indexPath.row];
+        NSString* filename = [NSString stringWithFormat:@"%@_full.jpg", wish[kBirthdayJsonKeyPic]];
+        NSString* url = wish[kBirthdayJsonKeyPicUrl];
+        [self.zoomInPicView preparePicView:filename url:url];
+    }
+    
+    [UIView animateWithDuration:0.25f animations:^{
+        self.zoomInPicView.alpha = 1.0f;
+    }];
+}
+
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -109,9 +138,9 @@ static NSString * const reuseIdentifier = @"Cell";
 - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
 	return NO;
 }
-
+ 
 - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
+    NSLog(@"%@ selected", indexPath.row);
 }
 */
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		688C7DC41B467E790009AF6D /* zoom-in.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C7DC31B467E790009AF6D /* zoom-in.png */; };
+		688C7DC71B467FD70009AF6D /* ZoomZoomPicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C7DC61B467FD70009AF6D /* ZoomZoomPicView.m */; };
 		6897B76A1B3A846300C79DE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897B7691B3A846300C79DE2 /* main.m */; };
 		6897B76D1B3A846300C79DE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897B76C1B3A846300C79DE2 /* AppDelegate.m */; };
 		6897B7731B3A846300C79DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6897B7711B3A846300C79DE2 /* Main.storyboard */; };
@@ -64,6 +65,9 @@
 
 /* Begin PBXFileReference section */
 		688C7DC31B467E790009AF6D /* zoom-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zoom-in.png"; sourceTree = SOURCE_ROOT; };
+		688C7DC51B467FD70009AF6D /* ZoomZoomPicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomZoomPicView.h; sourceTree = "<group>"; };
+		688C7DC61B467FD70009AF6D /* ZoomZoomPicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomZoomPicView.m; sourceTree = "<group>"; };
+		688C7DC81B46924D0009AF6D /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
 		6897B7641B3A846300C79DE2 /* NicoleHBD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicoleHBD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6897B7681B3A846300C79DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6897B7691B3A846300C79DE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 			children = (
 				6897B76B1B3A846300C79DE2 /* AppDelegate.h */,
 				6897B76C1B3A846300C79DE2 /* AppDelegate.m */,
+				688C7DC81B46924D0009AF6D /* Definitions.h */,
 				68CCA8271B3BC795004E9B49 /* MainViewController.h */,
 				68CCA8281B3BC795004E9B49 /* MainViewController.m */,
 				68D38DCD1B45108A009F1511 /* PicsCollectionViewController.h */,
@@ -179,6 +184,8 @@
 				68D38DD51B4635C0009F1511 /* PicsCollectionViewCell.m */,
 				68D38DA21B43BAFE009F1511 /* BypassTouchImageView.h */,
 				68D38DA31B43BAFE009F1511 /* BypassTouchImageView.m */,
+				688C7DC51B467FD70009AF6D /* ZoomZoomPicView.h */,
+				688C7DC61B467FD70009AF6D /* ZoomZoomPicView.m */,
 				68D38D941B427968009F1511 /* BCWebImageView.h */,
 				68D38D951B427968009F1511 /* BCWebImageView.m */,
 				68CCA82D1B3BCD38004E9B49 /* Utilities.h */,
@@ -389,6 +396,7 @@
 				68D38D961B427968009F1511 /* BCWebImageView.m in Sources */,
 				68D38DD61B4635C0009F1511 /* PicsCollectionViewCell.m in Sources */,
 				6897B76D1B3A846300C79DE2 /* AppDelegate.m in Sources */,
+				688C7DC71B467FD70009AF6D /* ZoomZoomPicView.m in Sources */,
 				6897B76A1B3A846300C79DE2 /* main.m in Sources */,
 				68D38DCF1B45108A009F1511 /* PicsCollectionViewController.m in Sources */,
 				68CCA8291B3BC795004E9B49 /* MainViewController.m in Sources */,

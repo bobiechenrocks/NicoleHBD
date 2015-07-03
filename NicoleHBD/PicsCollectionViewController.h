@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol PicsCollectionDelegate <NSObject>
-
-- (NSArray*)providePicsAndWishes;
-
-@end
-
 @interface PicsCollectionViewController : UICollectionViewController
 
 @property (weak, nonatomic) NSArray* picsAndWishes;
