@@ -10,6 +10,6 @@
 
 @interface ZoomZoomPicView : UIScrollView
 
-- (void)preparePicView:(NSString*)filename url:(NSString*)url;
+- (void)preparePicView:(NSString*)filename url:(NSString*)url wishWords:(NSString*)wishWords;
 
 @end

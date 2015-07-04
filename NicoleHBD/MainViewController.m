@@ -72,7 +72,7 @@
     [circle2 setBackgroundColor:[UIColor clearColor]];
     [circle2.layer setCornerRadius:circle2size/2.0f];
     [circle2.layer setBorderColor:[UIColor whiteColor].CGColor];
-    [circle2.layer setBorderWidth:8.0f];
+    [circle2.layer setBorderWidth:7.0f];
 
 }
 
@@ -124,6 +124,12 @@
         return;
     }
     
+    for (UIView* subview in self.baseScroll.subviews) {
+        if ([subview isKindOfClass:[BCWebImageView class]]) {
+            [subview removeFromSuperview];
+        }
+    }
+    
     if (self.birthdayJson[kBirthdayJsonKeyWishes]) {
         NSArray* wishes = self.birthdayJson[kBirthdayJsonKeyWishes];
         
@@ -135,30 +141,12 @@
                 continue;
             }
             
-            BOOL bInvalidPicName = NO;
-            if ([picName length] > 0) {
-                CGFloat baseScrollSize = self.baseScroll.frame.size.width;
-                UIImage* pic = [UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg", picName]];
-                if (pic) {
-                    UIImageView* picImageView = [[UIImageView alloc] initWithFrame:CGRectMake(count*baseScrollSize, 0.0f, baseScrollSize, baseScrollSize)];
-                    picImageView.image = pic;
-                    [self.baseScroll addSubview:picImageView];
-                }
-                else {
-                    bInvalidPicName = YES;
-                }
-            }
-            else {
-                bInvalidPicName = YES;
-            }
-            
-            if (bInvalidPicName && [picUrl length] > 0) {
-                CGFloat baseScrollSize = self.baseScroll.frame.size.width;
-                BCWebImageView* picImageview = [[BCWebImageView alloc] initWithFrame:CGRectMake(count*baseScrollSize, 0.0f, baseScrollSize, baseScrollSize)
-                                                                            filename:nil url:picUrl];
-                [self.baseScroll addSubview:picImageview];
-            }
-            
+            CGFloat baseScrollSize = self.baseScroll.frame.size.width;
+            BCWebImageView* picImageView = [[BCWebImageView alloc] initWithFrame:CGRectMake(count*baseScrollSize, 0.0f, baseScrollSize, baseScrollSize)
+                                                                        filename:[NSString stringWithFormat:@"%@_thumb.jpg", picName]
+                                                                             url:picUrl];
+            [self.baseScroll addSubview:picImageView];
+                        
             count++;
         }
         
@@ -192,7 +180,8 @@
         NSDictionary* wish = self.birthdayJson[kBirthdayJsonKeyWishes][currentScrollIndex];
         NSString* filename = [NSString stringWithFormat:@"%@_full.jpg", wish[kBirthdayJsonKeyPic]];
         NSString* url = wish[kBirthdayJsonKeyPicUrl];
-        [self.zoomInPicView preparePicView:filename url:url];
+        NSString* wishWords = wish[kBirthdayJsonKeyWords];
+        [self.zoomInPicView preparePicView:filename url:url wishWords:wishWords];
     }
     
     [UIView animateWithDuration:0.25f animations:^{

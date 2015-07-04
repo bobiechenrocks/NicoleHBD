@@ -107,7 +107,8 @@ static NSString * const reuseIdentifier = @"Cell";
         NSDictionary* wish = self.picsAndWishes[indexPath.row];
         NSString* filename = [NSString stringWithFormat:@"%@_full.jpg", wish[kBirthdayJsonKeyPic]];
         NSString* url = wish[kBirthdayJsonKeyPicUrl];
-        [self.zoomInPicView preparePicView:filename url:url];
+        NSString* wishWords = wish[kBirthdayJsonKeyWords];
+        [self.zoomInPicView preparePicView:filename url:url wishWords:wishWords];
     }
     
     [UIView animateWithDuration:0.25f animations:^{
