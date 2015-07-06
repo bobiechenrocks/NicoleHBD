@@ -15,5 +15,6 @@ static NSString* const kBirthdayJsonKeyWishes = @"wishes";
 static NSString* const kBirthdayJsonKeyPic = @"pic";
 static NSString* const kBirthdayJsonKeyPicUrl = @"pic_url";
 static NSString* const kBirthdayJsonKeyWords = @"words";
+static NSString* const kPushNotificationArchiveKey = @"pushNotificationArchive";
 
 #endif

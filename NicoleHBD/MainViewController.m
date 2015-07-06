@@ -13,14 +13,16 @@
 #import "PicsCollectionViewController.h"
 #import "ZoomZoomPicView.h"
 #import "Definitions.h"
+#import "SplashView.h"
 
-@interface MainViewController ()
+@interface MainViewController () <SplashViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
 @property (weak, nonatomic) IBOutlet UIScrollView *baseScroll;
 @property (weak, nonatomic) IBOutlet BypassTouchImageView *hollowCircleView;
 @property (weak, nonatomic) IBOutlet UIButton *galleryButton;
 
+@property (strong, nonatomic) SplashView* postSplashView;
 @property (strong, nonatomic) ZoomZoomPicView* zoomInPicView;
 
 @property (strong, nonatomic) NSDictionary* birthdayJson;
@@ -33,13 +35,31 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self preparePostSplashView];
+    
     [self prepareMainView];
-    [self prepareBirthdayJSON];
+}
+
+- (void)splashAnimationDidComplete {
+    [UIView animateWithDuration:0.25f animations:^{
+        self.postSplashView.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        self.postSplashView.hidden = YES;
+        [self prepareBirthdayJSON];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)preparePostSplashView {
+    if (!self.postSplashView) {
+        self.postSplashView = [[SplashView alloc] initWithFrame:self.view.frame];
+        self.postSplashView.delegate = self;
+        [self.view addSubview:self.postSplashView];
+    }
 }
 
 - (void)prepareMainView {

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "Definitions.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
+    NSDictionary *pushDict = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if(pushDict) {
+        [self application:application didReceiveRemoteNotification:pushDict];
+    }
+    
+    NSArray* notifications = [[NSUserDefaults standardUserDefaults] objectForKey:kPushNotificationArchiveKey];
+    if ([notifications count] > 0) {
+        for (NSString* message in notifications) {
+            NSLog(@"%@", message);
+        }
+    }
     
     // Enable storing and querying data from Local Datastore. Remove this line if you don't want to
     // use Local Datastore features or want to use cachePolicy.
@@ -96,6 +109,27 @@
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"Failed to register for remote notiification. Error: %@", [error localizedDescription]);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    NSDictionary* aps = userInfo[@"aps"];
+    NSString* message = aps[@"alert"];
+    
+    NSMutableArray* notifications = nil;
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kPushNotificationArchiveKey]) {
+        notifications = [[[NSUserDefaults standardUserDefaults] objectForKey:kPushNotificationArchiveKey] mutableCopy];
+    }
+    else {
+        notifications = [NSMutableArray arrayWithCapacity:0];
+    }
+    
+    [notifications addObject:message];
+    [[NSUserDefaults standardUserDefaults] setObject:notifications forKey:kPushNotificationArchiveKey];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+                                                    fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"seriously?");
 }
 
 #pragma mark - app life-cycle management

@@ -41,8 +41,9 @@
 //        [self.dismissButton setImage:[UIImage imageNamed:@"dismiss.png"] forState:UIControlStateNormal];
 //        [self.dismissButton addTarget:self action:@selector(dismissView) forControlEvents:UIControlEventTouchUpInside];
         
-        CGFloat y = self.frame.size.height - 15.0f - 32.0f;
-        self.wordsButton = [[UIButton alloc] initWithFrame:CGRectMake(15.0f, y, 32.0f, 32.0f)];
+        CGFloat size = 44.0f;
+        CGFloat y = self.frame.size.height - 15.0f - size;
+        self.wordsButton = [[UIButton alloc] initWithFrame:CGRectMake(15.0f, y, size, size)];
         [self addSubview:self.wordsButton];
         [self.wordsButton setImage:[UIImage imageNamed:@"words.png"] forState:UIControlStateNormal];
         [self.wordsButton addTarget:self action:@selector(showWishWords) forControlEvents:UIControlEventTouchUpInside];
@@ -125,6 +126,8 @@
     [self addSubview:self.picView];
     self.picView.image = image;
     [self.picView setUserInteractionEnabled:YES];
+    
+    [self addSubview:self.wordsButton];
 }
 
 - (UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView {
