@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *baseScroll;
 @property (weak, nonatomic) IBOutlet BypassTouchImageView *hollowCircleView;
 @property (weak, nonatomic) IBOutlet UIButton *galleryButton;
+@property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 
 @property (strong, nonatomic) SplashView* postSplashView;
 @property (strong, nonatomic) ZoomZoomPicView* zoomInPicView;
@@ -103,7 +104,11 @@
     NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:kBirthdayJsonUrl] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:5.0f];
     [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         
-        dispatch_async(dispatch_get_main_queue(), ^{ self.loadingIndicator.hidden = YES; });
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.loadingIndicator.hidden = YES;
+            self.refreshButton.enabled = YES;
+        });
+        
         BOOL bUseUserDefault = NO;
         
         if (connectionError) {
@@ -156,7 +161,7 @@
         NSUInteger count = 0;
         for (NSDictionary* wish in wishes) {
             NSString* picName = wish[kBirthdayJsonKeyPic];
-            NSString* picUrl = wish[kBirthdayJsonKeyPicUrl];
+            NSString* picUrl = wish[kBirthdayJsonKeyPicThumbUrl];
             if ([picName length] <= 0 && [picUrl length] <= 0) {
                 continue;
             }
@@ -207,6 +212,11 @@
     [UIView animateWithDuration:0.25f animations:^{
         self.zoomInPicView.alpha = 1.0f;
     }];
+}
+
+- (IBAction)refreshButtonClicked:(id)sender {
+    self.refreshButton.enabled = NO;
+    [self prepareBirthdayJSON];
 }
 
 @end

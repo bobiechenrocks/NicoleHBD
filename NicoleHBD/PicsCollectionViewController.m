@@ -77,8 +77,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
     // Configure the cell
     if (indexPath.row < [self.picsAndWishes count]) {
-        cell.picName = (self.picsAndWishes[indexPath.row])[@"pic"];
-        cell.picThumbUrl = (self.picsAndWishes[indexPath.row])[@"pic_thumb_url"];
+        cell.picName = (self.picsAndWishes[indexPath.row])[kBirthdayJsonKeyPic];
+        cell.picThumbUrl = (self.picsAndWishes[indexPath.row])[kBirthdayJsonKeyPicThumbUrl];
         [cell preparePicImage];
     }
     

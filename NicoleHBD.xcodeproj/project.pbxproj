@@ -45,8 +45,6 @@
 		68D38D961B427968009F1511 /* BCWebImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D38D951B427968009F1511 /* BCWebImageView.m */; };
 		68D38D9C1B427E07009F1511 /* timw_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38D981B427E07009F1511 /* timw_full.jpg */; };
 		68D38D9D1B427E07009F1511 /* timw_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38D991B427E07009F1511 /* timw_thumb.jpg */; };
-		68D38D9E1B427E07009F1511 /* york_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38D9A1B427E07009F1511 /* york_full.jpg */; };
-		68D38D9F1B427E07009F1511 /* york_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38D9B1B427E07009F1511 /* york_thumb.jpg */; };
 		68D38DA11B43ADE3009F1511 /* facade_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DA01B43ADE3009F1511 /* facade_circle.png */; };
 		68D38DA41B43BAFE009F1511 /* BypassTouchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D38DA31B43BAFE009F1511 /* BypassTouchImageView.m */; };
 		68D38DA71B43BEA3009F1511 /* james_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 68D38DA51B43BEA3009F1511 /* james_full.jpg */; };
@@ -77,6 +75,8 @@
 		8F4FE2AE1B4C5060008AC2D9 /* 六_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F4FE2AC1B4C5060008AC2D9 /* 六_thumb.jpg */; };
 		8F4FE2B11B4C5312008AC2D9 /* angela_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F4FE2AF1B4C5312008AC2D9 /* angela_full.jpg */; };
 		8F4FE2B21B4C5312008AC2D9 /* angela_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F4FE2B01B4C5312008AC2D9 /* angela_thumb.jpg */; };
+		8F4FE2BF1B4C749B008AC2D9 /* york_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F4FE2BD1B4C749B008AC2D9 /* york_full.jpg */; };
+		8F4FE2C01B4C749B008AC2D9 /* york_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F4FE2BE1B4C749B008AC2D9 /* york_thumb.jpg */; };
 		8F8E698C1B4AF12C0007836D /* birdway_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E69861B4AF12C0007836D /* birdway_full.jpg */; };
 		8F8E698D1B4AF12C0007836D /* birdway_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E69871B4AF12C0007836D /* birdway_thumb.jpg */; };
 		8F8E698E1B4AF12C0007836D /* dot_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E69881B4AF12C0007836D /* dot_full.jpg */; };
@@ -152,8 +152,6 @@
 		68D38D951B427968009F1511 /* BCWebImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCWebImageView.m; sourceTree = "<group>"; };
 		68D38D981B427E07009F1511 /* timw_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timw_full.jpg; path = BirthdayPics/timw_full.jpg; sourceTree = "<group>"; };
 		68D38D991B427E07009F1511 /* timw_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timw_thumb.jpg; path = BirthdayPics/timw_thumb.jpg; sourceTree = "<group>"; };
-		68D38D9A1B427E07009F1511 /* york_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = york_full.jpg; path = BirthdayPics/york_full.jpg; sourceTree = "<group>"; };
-		68D38D9B1B427E07009F1511 /* york_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = york_thumb.jpg; path = BirthdayPics/york_thumb.jpg; sourceTree = "<group>"; };
 		68D38DA01B43ADE3009F1511 /* facade_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facade_circle.png; sourceTree = SOURCE_ROOT; };
 		68D38DA21B43BAFE009F1511 /* BypassTouchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BypassTouchImageView.h; sourceTree = "<group>"; };
 		68D38DA31B43BAFE009F1511 /* BypassTouchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BypassTouchImageView.m; sourceTree = "<group>"; };
@@ -187,6 +185,8 @@
 		8F4FE2AC1B4C5060008AC2D9 /* 六_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "六_thumb.jpg"; path = "BirthdayPics/六_thumb.jpg"; sourceTree = "<group>"; };
 		8F4FE2AF1B4C5312008AC2D9 /* angela_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = angela_full.jpg; path = BirthdayPics/angela_full.jpg; sourceTree = "<group>"; };
 		8F4FE2B01B4C5312008AC2D9 /* angela_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = angela_thumb.jpg; path = BirthdayPics/angela_thumb.jpg; sourceTree = "<group>"; };
+		8F4FE2BD1B4C749B008AC2D9 /* york_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = york_full.jpg; path = BirthdayPics/york_full.jpg; sourceTree = "<group>"; };
+		8F4FE2BE1B4C749B008AC2D9 /* york_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = york_thumb.jpg; path = BirthdayPics/york_thumb.jpg; sourceTree = "<group>"; };
 		8F8E69861B4AF12C0007836D /* birdway_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = birdway_full.jpg; path = BirthdayPics/birdway_full.jpg; sourceTree = "<group>"; };
 		8F8E69871B4AF12C0007836D /* birdway_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = birdway_thumb.jpg; path = BirthdayPics/birdway_thumb.jpg; sourceTree = "<group>"; };
 		8F8E69881B4AF12C0007836D /* dot_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dot_full.jpg; path = BirthdayPics/dot_full.jpg; sourceTree = "<group>"; };
@@ -325,8 +325,8 @@
 			children = (
 				68D38D981B427E07009F1511 /* timw_full.jpg */,
 				68D38D991B427E07009F1511 /* timw_thumb.jpg */,
-				68D38D9A1B427E07009F1511 /* york_full.jpg */,
-				68D38D9B1B427E07009F1511 /* york_thumb.jpg */,
+				8F4FE2BD1B4C749B008AC2D9 /* york_full.jpg */,
+				8F4FE2BE1B4C749B008AC2D9 /* york_thumb.jpg */,
 				68D38DA51B43BEA3009F1511 /* james_full.jpg */,
 				68D38DA61B43BEA3009F1511 /* james_thumb.jpg */,
 				68D38DBD1B43D9C6009F1511 /* janet_full.jpg */,
@@ -492,14 +492,12 @@
 				68D38DA11B43ADE3009F1511 /* facade_circle.png in Resources */,
 				688C7DD71B48FCAA0009AF6D /* 許栩_full.jpg in Resources */,
 				688C7DF01B4A118D0009AF6D /* davidlin_full.jpg in Resources */,
-				68D38D9F1B427E07009F1511 /* york_thumb.jpg in Resources */,
 				8F4FE2B11B4C5312008AC2D9 /* angela_full.jpg in Resources */,
 				8F4FE2B21B4C5312008AC2D9 /* angela_thumb.jpg in Resources */,
 				68D38DB81B43C44B009F1511 /* sasalu_thumb.jpg in Resources */,
 				688C7DEC1B4A110D0009AF6D /* timku_full.jpg in Resources */,
 				8F8E69911B4AF12C0007836D /* 五福_thumb.jpg in Resources */,
 				688C7DED1B4A110D0009AF6D /* timku_thumb.jpg in Resources */,
-				68D38D9E1B427E07009F1511 /* york_full.jpg in Resources */,
 				8F8E69901B4AF12C0007836D /* 五福_full.jpg in Resources */,
 				688C7DD31B48F9720009AF6D /* janettomfox_full.jpg in Resources */,
 				68D38DC71B450BE6009F1511 /* fei_full.jpg in Resources */,
@@ -508,6 +506,7 @@
 				8F8E698D1B4AF12C0007836D /* birdway_thumb.jpg in Resources */,
 				68D38DD31B4523CD009F1511 /* refresh.png in Resources */,
 				8F8E699D1B4B00630007836D /* derek_thumb.jpg in Resources */,
+				8F4FE2C01B4C749B008AC2D9 /* york_thumb.jpg in Resources */,
 				8F4FE2AE1B4C5060008AC2D9 /* 六_thumb.jpg in Resources */,
 				688C7DD81B48FCAA0009AF6D /* 許栩_thumb.jpg in Resources */,
 				8F4FE2AA1B4C4FE0008AC2D9 /* jasonbill_thumb.jpg in Resources */,
@@ -532,6 +531,7 @@
 				688C7DC41B467E790009AF6D /* zoom-in.png in Resources */,
 				8F8E69981B4AF5A80007836D /* rhyme_full.jpg in Resources */,
 				68D38DB91B43C44B009F1511 /* YY_full.jpg in Resources */,
+				8F4FE2BF1B4C749B008AC2D9 /* york_full.jpg in Resources */,
 				68D38DC01B43D9C6009F1511 /* janet_thumb.jpg in Resources */,
 				8F8E698F1B4AF12C0007836D /* dot_thumb.jpg in Resources */,
 			);

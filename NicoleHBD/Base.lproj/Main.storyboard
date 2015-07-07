@@ -27,6 +27,9 @@
                                 <state key="normal" image="refresh.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="refreshButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HIL-DS-e92"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicole's 28" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmU-fa-jPQ">
                                 <rect key="frame" x="264" y="571" width="72" height="21"/>
@@ -150,6 +153,7 @@
                         <outlet property="galleryButton" destination="ffb-RO-QyV" id="VwZ-zg-4sT"/>
                         <outlet property="hollowCircleView" destination="soE-1b-kNh" id="NkY-AV-ifo"/>
                         <outlet property="loadingIndicator" destination="wmn-z7-cfA" id="HbG-2o-y98"/>
+                        <outlet property="refreshButton" destination="AIl-VC-B91" id="lyl-ES-9oq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,6 +13,7 @@ static NSString* const kBirthdayJsonUrl = @"http://bobiechenrocks.appspot.com/ni
 static NSString* const kBirthdayJsonKey = @"birthdayJson";
 static NSString* const kBirthdayJsonKeyWishes = @"wishes";
 static NSString* const kBirthdayJsonKeyPic = @"pic";
+static NSString* const kBirthdayJsonKeyPicThumbUrl = @"pic_thumb_url";
 static NSString* const kBirthdayJsonKeyPicUrl = @"pic_url";
 static NSString* const kBirthdayJsonKeyWords = @"words";
 static NSString* const kPushNotificationArchiveKey = @"pushNotificationArchive";
