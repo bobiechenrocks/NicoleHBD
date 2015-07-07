@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SplashView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2h-xc-3fr" userLabel="Align View">
+                    <rect key="frame" x="15" y="119" width="290" height="290"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="290" id="CE5-AB-s4c"/>
+                        <constraint firstAttribute="height" constant="290" id="ORO-fw-bG8"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sP-yW-aQL" userLabel="HappyBirthday Label Base View">
+                    <rect key="frame" x="28" y="417" width="265" height="93"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysu-2Y-wmV">
+                            <rect key="frame" x="3" y="39" width="38" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39V-m2-dI8">
+                            <rect key="frame" x="41" y="39" width="38" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hs-UA-NPX">
+                            <rect key="frame" x="60" y="39" width="38" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOj-Xi-7tm">
+                            <rect key="frame" x="98" y="39" width="38" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsy-nf-WdL">
+                            <rect key="frame" x="128" y="39" width="39" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="D" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTQ-9i-tuE">
+                            <rect key="frame" x="165" y="39" width="39" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1U-00-eUr">
+                            <rect key="frame" x="199" y="39" width="39" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bz9-Hb-pOd">
+                            <rect key="frame" x="229" y="39" width="39" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="50"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfJ-g7-loc">
+                            <rect key="frame" x="28" y="-5" width="47" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="60"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgA-f9-FEh">
+                            <rect key="frame" x="73" y="-5" width="46" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="60"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="P" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBM-e7-QLM">
+                            <rect key="frame" x="116" y="-5" width="46" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="60"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="P" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lG7-Zg-r0c">
+                            <rect key="frame" x="158" y="-5" width="46" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="60"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbk-Bb-Cjh">
+                            <rect key="frame" x="200" y="-5" width="46" height="61"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="60"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="y2h-xc-3fr" secondAttribute="centerY" constant="20" id="0KA-VG-Ldf"/>
+                <constraint firstAttribute="centerX" secondItem="y2h-xc-3fr" secondAttribute="centerX" id="173-Id-JmP"/>
+                <constraint firstAttribute="centerX" secondItem="y2h-xc-3fr" secondAttribute="centerX" id="Umt-Dv-pe6"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="173-Id-JmP"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="happyBirthdayBaseView" destination="9sP-yW-aQL" id="BMg-QF-Hx0"/>
+                <outlet property="labelA" destination="vgA-f9-FEh" id="9Uj-KL-4KV"/>
+                <outlet property="labelA2" destination="U1U-00-eUr" id="cmH-rN-3a7"/>
+                <outlet property="labelB" destination="ysu-2Y-wmV" id="0Z9-k2-gYC"/>
+                <outlet property="labelD" destination="GTQ-9i-tuE" id="Zyt-mH-3kh"/>
+                <outlet property="labelH" destination="rfJ-g7-loc" id="FQS-95-fik"/>
+                <outlet property="labelH2" destination="Rsy-nf-WdL" id="EMu-JZ-vd1"/>
+                <outlet property="labelI" destination="39V-m2-dI8" id="RMX-Zo-pb0"/>
+                <outlet property="labelP" destination="BBM-e7-QLM" id="X2o-w5-XO0"/>
+                <outlet property="labelP2" destination="lG7-Zg-r0c" id="RbF-9S-oOb"/>
+                <outlet property="labelR" destination="1hs-UA-NPX" id="o6S-zM-xTK"/>
+                <outlet property="labelT" destination="UOj-Xi-7tm" id="lzI-UK-b4f"/>
+                <outlet property="labelY" destination="wbk-Bb-Cjh" id="L6K-Or-qhE"/>
+                <outlet property="labelY2" destination="bz9-Hb-pOd" id="gWc-SG-qxB"/>
+            </connections>
+            <point key="canvasLocation" x="274" y="459"/>
+        </view>
+    </objects>
+</document>

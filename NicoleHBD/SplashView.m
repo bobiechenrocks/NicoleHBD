@@ -15,13 +15,37 @@
 @property (strong, nonatomic) UILabel* seven;
 @property (strong, nonatomic) UILabel* eight;
 
+@property (weak, nonatomic) IBOutlet UIView *happyBirthdayBaseView;
+@property (weak, nonatomic) IBOutlet UILabel *labelH;
+@property (weak, nonatomic) IBOutlet UILabel *labelA;
+@property (weak, nonatomic) IBOutlet UILabel *labelP;
+@property (weak, nonatomic) IBOutlet UILabel *labelP2;
+@property (weak, nonatomic) IBOutlet UILabel *labelY;
+@property (weak, nonatomic) IBOutlet UILabel *labelB;
+@property (weak, nonatomic) IBOutlet UILabel *labelI;
+@property (weak, nonatomic) IBOutlet UILabel *labelR;
+@property (weak, nonatomic) IBOutlet UILabel *labelT;
+@property (weak, nonatomic) IBOutlet UILabel *labelH2;
+@property (weak, nonatomic) IBOutlet UILabel *labelD;
+@property (weak, nonatomic) IBOutlet UILabel *labelA2;
+@property (weak, nonatomic) IBOutlet UILabel *labelY2;
+
 @end
 
-@implementation SplashView
+static NSArray* hbdColorCodes;
+
+@implementation SplashView {
+    NSArray* m_hbdLabelArrays;
+}
 
 - (SplashView*)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        self = [[[NSBundle mainBundle] loadNibNamed:@"SplashView" owner:self options:nil] objectAtIndex:0];
+        self.frame = frame;
         [self setBackgroundColor:[Utilities colorWithHex:0xfacade]];
+        
+        hbdColorCodes = @[ @0x20c014, @0xb90006, @0x186dfb, @0x7000bc, @0xf88709 ];
+        
         [self preparePostSplashView];
     }
     
@@ -89,6 +113,9 @@
     frame.origin.y = -frame.size.height;//(circle2size - frame.size.height)/2.0f;
     self.eight.frame = frame;
     
+    m_hbdLabelArrays = @[ self.labelH, self.labelA, self.labelP, self.labelP2, self.labelY,
+                          self.labelB, self.labelI, self.labelR, self.labelT, self.labelH2, self.labelD, self.labelA2, self.labelY2 ];
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self dropEight];
     });
@@ -127,14 +154,109 @@
                         frame.origin.y = frame.origin.y - 2.0f;
                         self.eight.frame = frame;
                     } completion:^(BOOL finished) {
-                        if (self.delegate && [self.delegate respondsToSelector:@selector(splashAnimationDidComplete)]) {
-                            [self.delegate splashAnimationDidComplete];
-                        }
+                        [self trinkleHappyBirthday];
                     }];
                 }];
             }];
         }];
     }];
+}
+
+- (void)trinkleHappyBirthday {
+    self.happyBirthdayBaseView.alpha = 0.0f;
+    self.happyBirthdayBaseView.hidden = NO;
+    [UIView animateWithDuration:0.25f animations:^{
+        self.happyBirthdayBaseView.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+        UIViewAnimationOptions option = UIViewAnimationOptionTransitionCrossDissolve;
+        CGFloat animationDuration = 0.5f;
+        [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+            for (UILabel* label in m_hbdLabelArrays) {
+                label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+            }
+        } completion:^(BOOL finished) {
+            [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                for (UILabel* label in m_hbdLabelArrays) {
+                    label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                }
+            } completion:^(BOOL finished) {
+                [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                    for (UILabel* label in m_hbdLabelArrays) {
+                        label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                    }
+                } completion:^(BOOL finished) {
+                    [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                        for (UILabel* label in m_hbdLabelArrays) {
+                            label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                        }
+                    } completion:^(BOOL finished) {
+                        [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                            for (UILabel* label in m_hbdLabelArrays) {
+                                label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                            }
+                        } completion:^(BOOL finished) {
+                            [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                                for (UILabel* label in m_hbdLabelArrays) {
+                                    label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                                }
+                            } completion:^(BOOL finished) {
+                                [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                                    UIColor* color = [Utilities colorWithHex:[hbdColorCodes[0] integerValue]];
+                                    for (UILabel* label in m_hbdLabelArrays) {
+                                        label.textColor = color;
+                                    }
+                                } completion:^(BOOL finished) {
+                                    [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                                        UIColor* color = [Utilities colorWithHex:[hbdColorCodes[1] integerValue]];
+                                        for (UILabel* label in m_hbdLabelArrays) {
+                                            label.textColor = color;
+                                        }
+                                    } completion:^(BOOL finished) {
+                                        [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                                            UIColor* color = [Utilities colorWithHex:[hbdColorCodes[2] integerValue]];
+                                            for (UILabel* label in m_hbdLabelArrays) {
+                                                label.textColor = color;
+                                            }
+                                        } completion:^(BOOL finished) {
+                                            [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                                                UIColor* color = [Utilities colorWithHex:[hbdColorCodes[3] integerValue]];
+                                                for (UILabel* label in m_hbdLabelArrays) {
+                                                    label.textColor = color;
+                                                }
+                                            } completion:^(BOOL finished) {
+                                                [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                                                    UIColor* color = [Utilities colorWithHex:[hbdColorCodes[4] integerValue]];
+                                                    for (UILabel* label in m_hbdLabelArrays) {
+                                                        label.textColor = color;
+                                                    }
+                                                } completion:^(BOOL finished) {
+                                                    [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
+                                                        for (UILabel* label in m_hbdLabelArrays) {
+                                                            label.textColor = [UIColor whiteColor];
+                                                        }
+                                                    } completion:^(BOOL finished) {
+                                                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                            if (self.delegate && [self.delegate respondsToSelector:@selector(splashAnimationDidComplete)]) {
+                                                                [self.delegate splashAnimationDidComplete];
+                                                            }
+                                                        });
+                                                    }];
+                                                }];
+                                            }];
+                                        }];
+                                    }];
+                                }];
+                            }];
+                        }];
+                    }];
+                }];
+            }];
+        }];
+    }];
+}
+
+- (NSUInteger)picRandomHbdColorCode {
+    return [[hbdColorCodes objectAtIndex:arc4random() % [hbdColorCodes count]] integerValue];
 }
 
 @end

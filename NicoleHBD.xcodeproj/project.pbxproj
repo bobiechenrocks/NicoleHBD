@@ -28,6 +28,7 @@
 		688C7DED1B4A110D0009AF6D /* timku_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 688C7DEB1B4A110D0009AF6D /* timku_thumb.jpg */; };
 		688C7DF01B4A118D0009AF6D /* davidlin_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 688C7DEE1B4A118D0009AF6D /* davidlin_full.jpg */; };
 		688C7DF11B4A118D0009AF6D /* davidlin_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 688C7DEF1B4A118D0009AF6D /* davidlin_thumb.jpg */; };
+		688C7DF31B4B91AE0009AF6D /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 688C7DF21B4B91AE0009AF6D /* SplashView.xib */; };
 		6897B76A1B3A846300C79DE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897B7691B3A846300C79DE2 /* main.m */; };
 		6897B76D1B3A846300C79DE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6897B76C1B3A846300C79DE2 /* AppDelegate.m */; };
 		6897B7731B3A846300C79DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6897B7711B3A846300C79DE2 /* Main.storyboard */; };
@@ -119,6 +120,7 @@
 		688C7DEB1B4A110D0009AF6D /* timku_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = timku_thumb.jpg; path = BirthdayPics/timku_thumb.jpg; sourceTree = "<group>"; };
 		688C7DEE1B4A118D0009AF6D /* davidlin_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = davidlin_full.jpg; path = BirthdayPics/davidlin_full.jpg; sourceTree = "<group>"; };
 		688C7DEF1B4A118D0009AF6D /* davidlin_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = davidlin_thumb.jpg; path = BirthdayPics/davidlin_thumb.jpg; sourceTree = "<group>"; };
+		688C7DF21B4B91AE0009AF6D /* SplashView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
 		6897B7641B3A846300C79DE2 /* NicoleHBD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicoleHBD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6897B7681B3A846300C79DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6897B7691B3A846300C79DE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				68CCA8281B3BC795004E9B49 /* MainViewController.m */,
 				688C7DE51B49F1410009AF6D /* SplashView.h */,
 				688C7DE61B49F1410009AF6D /* SplashView.m */,
+				688C7DF21B4B91AE0009AF6D /* SplashView.xib */,
 				68D38DCD1B45108A009F1511 /* PicsCollectionViewController.h */,
 				68D38DCE1B45108A009F1511 /* PicsCollectionViewController.m */,
 				68D38DD41B4635C0009F1511 /* PicsCollectionViewCell.h */,
@@ -448,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F8E698E1B4AF12C0007836D /* dot_full.jpg in Resources */,
+				688C7DF31B4B91AE0009AF6D /* SplashView.xib in Resources */,
 				6897B7731B3A846300C79DE2 /* Main.storyboard in Resources */,
 				68D38DBF1B43D9C6009F1511 /* janet_full.jpg in Resources */,
 				688C7DE21B49BC820009AF6D /* 嘉瑋_thumb.jpg in Resources */,
