@@ -168,36 +168,129 @@ static NSArray* hbdColorCodes;
     [UIView animateWithDuration:0.25f animations:^{
         self.happyBirthdayBaseView.alpha = 1.0f;
     } completion:^(BOOL finished) {
+        float animationDuration = 0.5f;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            for (UILabel* label in m_hbdLabelArrays) {
+                label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
+            }
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                for (UILabel* label in m_hbdLabelArrays) {
+                    label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
+                }
+                
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    for (UILabel* label in m_hbdLabelArrays) {
+                        label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
+                    }
+                    
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        for (UILabel* label in m_hbdLabelArrays) {
+                            label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
+                        }
+                        
+                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                            for (UILabel* label in m_hbdLabelArrays) {
+                                label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
+                            }
+                            
+                            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                for (UILabel* label in m_hbdLabelArrays) {
+                                    label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
+                                }
+                                
+                                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                    UIColor* color = [Utilities colorWithHex:[hbdColorCodes[0] integerValue]];
+                                    for (UILabel* label in m_hbdLabelArrays) {
+                                        label.textColor = color;
+                                    }
+                                    
+                                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                        UIColor* color = [Utilities colorWithHex:[hbdColorCodes[1] integerValue]];
+                                        for (UILabel* label in m_hbdLabelArrays) {
+                                            label.textColor = color;
+                                        }
+                                        
+                                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                            UIColor* color = [Utilities colorWithHex:[hbdColorCodes[2] integerValue]];
+                                            for (UILabel* label in m_hbdLabelArrays) {
+                                                label.textColor = color;
+                                            }
+                                            
+                                            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                UIColor* color = [Utilities colorWithHex:[hbdColorCodes[3] integerValue]];
+                                                for (UILabel* label in m_hbdLabelArrays) {
+                                                    label.textColor = color;
+                                                }
+                                                
+                                                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                    UIColor* color = [Utilities colorWithHex:[hbdColorCodes[4] integerValue]];
+                                                    for (UILabel* label in m_hbdLabelArrays) {
+                                                        label.textColor = color;
+                                                    }
+                                                    
+                                                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(animationDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                        UIColor* color = [UIColor whiteColor];
+                                                        for (UILabel* label in m_hbdLabelArrays) {
+                                                            label.textColor = color;
+                                                        }
+                                                        
+                                                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                            if (self.delegate && [self.delegate respondsToSelector:@selector(splashAnimationDidComplete)]) {
+                                                                [self.delegate splashAnimationDidComplete];
+                                                            }
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    }];
+}
+
+- (void)trinkleHappyBirthday2 {
+    self.happyBirthdayBaseView.alpha = 0.0f;
+    self.happyBirthdayBaseView.hidden = NO;
+    [UIView animateWithDuration:0.25f animations:^{
+        self.happyBirthdayBaseView.alpha = 1.0f;
+    } completion:^(BOOL finished) {
         UIViewAnimationOptions option = UIViewAnimationOptionTransitionCrossDissolve;
         CGFloat animationDuration = 0.5f;
         [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
             for (UILabel* label in m_hbdLabelArrays) {
-                label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
             }
         } completion:^(BOOL finished) {
             [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
                 for (UILabel* label in m_hbdLabelArrays) {
-                    label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                    label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
                 }
             } completion:^(BOOL finished) {
                 [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
                     for (UILabel* label in m_hbdLabelArrays) {
-                        label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                        label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
                     }
                 } completion:^(BOOL finished) {
                     [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
                         for (UILabel* label in m_hbdLabelArrays) {
-                            label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                            label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
                         }
                     } completion:^(BOOL finished) {
                         [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
                             for (UILabel* label in m_hbdLabelArrays) {
-                                label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                                label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
                             }
                         } completion:^(BOOL finished) {
                             [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
                                 for (UILabel* label in m_hbdLabelArrays) {
-                                    label.textColor = [Utilities colorWithHex:[self picRandomHbdColorCode]];
+                                    label.textColor = [Utilities colorWithHex:[self pickRandomHbdColorCode]];
                                 }
                             } completion:^(BOOL finished) {
                                 [UIView transitionWithView:self.happyBirthdayBaseView duration:animationDuration options:option animations:^{
@@ -255,7 +348,7 @@ static NSArray* hbdColorCodes;
     }];
 }
 
-- (NSUInteger)picRandomHbdColorCode {
+- (NSUInteger)pickRandomHbdColorCode {
     return [[hbdColorCodes objectAtIndex:arc4random() % [hbdColorCodes count]] integerValue];
 }
 
