@@ -18,7 +18,7 @@
                         <constraint firstAttribute="height" constant="290" id="ORO-fw-bG8"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sP-yW-aQL" userLabel="HappyBirthday Label Base View">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sP-yW-aQL" userLabel="HappyBirthday Label Base View">
                     <rect key="frame" x="28" y="417" width="265" height="93"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysu-2Y-wmV">
@@ -100,13 +100,19 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="93" id="VTo-Tb-zcr"/>
+                        <constraint firstAttribute="width" constant="265" id="WGi-3D-kqC"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="y2h-xc-3fr" secondAttribute="centerY" constant="20" id="0KA-VG-Ldf"/>
                 <constraint firstAttribute="centerX" secondItem="y2h-xc-3fr" secondAttribute="centerX" id="173-Id-JmP"/>
+                <constraint firstItem="9sP-yW-aQL" firstAttribute="centerX" secondItem="y2h-xc-3fr" secondAttribute="centerX" constant="0.5" id="1wm-yd-7eL"/>
                 <constraint firstAttribute="centerX" secondItem="y2h-xc-3fr" secondAttribute="centerX" id="Umt-Dv-pe6"/>
+                <constraint firstItem="9sP-yW-aQL" firstAttribute="top" secondItem="y2h-xc-3fr" secondAttribute="bottom" constant="8" id="Yr1-TI-8hV"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <variation key="default">

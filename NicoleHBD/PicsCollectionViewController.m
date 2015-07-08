@@ -90,7 +90,7 @@ static NSString * const reuseIdentifier = @"Cell";
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // Adjust cell size for orientation
-    CGFloat size = 72.0f;
+    CGFloat size = (self.view.frame.size.width - 32.0) / 4.0f;
     return CGSizeMake(size, size);
 }
 

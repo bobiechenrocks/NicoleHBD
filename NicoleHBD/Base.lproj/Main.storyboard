@@ -31,22 +31,6 @@
                                     <action selector="refreshButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HIL-DS-e92"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicole's 28" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmU-fa-jPQ">
-                                <rect key="frame" x="264" y="571" width="72" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="jeT-Rx-vfm"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="62" id="mLZ-Al-7Dt"/>
-                                    <constraint firstAttribute="width" constant="132" id="pAo-m0-9uY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.89318970959595956" green="0.5715296226384281" blue="0.62119625817400848" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="pAo-m0-9uY"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJE-oU-j7U">
                                 <rect key="frame" x="160" y="140" width="280" height="280"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -108,6 +92,22 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.82260101010101006" green="0.82260101010101006" blue="0.82260101010101006" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 28 -" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmU-fa-jPQ">
+                                <rect key="frame" x="281" y="571" width="38" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jeT-Rx-vfm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="mLZ-Al-7Dt"/>
+                                    <constraint firstAttribute="width" constant="132" id="pAo-m0-9uY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="14"/>
+                                <color key="textColor" red="0.89318970959595956" green="0.5715296226384281" blue="0.62119625817400848" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pAo-m0-9uY"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
