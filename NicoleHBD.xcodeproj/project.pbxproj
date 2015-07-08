@@ -89,6 +89,10 @@
 		8F8E69991B4AF5A80007836D /* rhyme_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E69951B4AF5A80007836D /* rhyme_thumb.jpg */; };
 		8F8E699C1B4B00630007836D /* derek_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E699A1B4B00630007836D /* derek_full.jpg */; };
 		8F8E699D1B4B00630007836D /* derek_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E699B1B4B00630007836D /* derek_thumb.jpg */; };
+		8FF3CD851B4D93C700385753 /* 雅芬姊_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF3CD831B4D93C700385753 /* 雅芬姊_full.jpg */; };
+		8FF3CD861B4D93C700385753 /* 雅芬姊_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF3CD841B4D93C700385753 /* 雅芬姊_thumb.jpg */; };
+		8FF3CD891B4D952900385753 /* weipei_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF3CD871B4D952900385753 /* weipei_full.jpg */; };
+		8FF3CD8A1B4D952900385753 /* weipei_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF3CD881B4D952900385753 /* weipei_thumb.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +203,10 @@
 		8F8E69951B4AF5A80007836D /* rhyme_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rhyme_thumb.jpg; path = BirthdayPics/rhyme_thumb.jpg; sourceTree = "<group>"; };
 		8F8E699A1B4B00630007836D /* derek_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = derek_full.jpg; path = BirthdayPics/derek_full.jpg; sourceTree = "<group>"; };
 		8F8E699B1B4B00630007836D /* derek_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = derek_thumb.jpg; path = BirthdayPics/derek_thumb.jpg; sourceTree = "<group>"; };
+		8FF3CD831B4D93C700385753 /* 雅芬姊_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "雅芬姊_full.jpg"; path = "BirthdayPics/雅芬姊_full.jpg"; sourceTree = "<group>"; };
+		8FF3CD841B4D93C700385753 /* 雅芬姊_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "雅芬姊_thumb.jpg"; path = "BirthdayPics/雅芬姊_thumb.jpg"; sourceTree = "<group>"; };
+		8FF3CD871B4D952900385753 /* weipei_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = weipei_full.jpg; path = BirthdayPics/weipei_full.jpg; sourceTree = "<group>"; };
+		8FF3CD881B4D952900385753 /* weipei_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = weipei_thumb.jpg; path = BirthdayPics/weipei_thumb.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +387,10 @@
 				8F4FE2AC1B4C5060008AC2D9 /* 六_thumb.jpg */,
 				8F4FE2AF1B4C5312008AC2D9 /* angela_full.jpg */,
 				8F4FE2B01B4C5312008AC2D9 /* angela_thumb.jpg */,
+				8FF3CD831B4D93C700385753 /* 雅芬姊_full.jpg */,
+				8FF3CD841B4D93C700385753 /* 雅芬姊_thumb.jpg */,
+				8FF3CD871B4D952900385753 /* weipei_full.jpg */,
+				8FF3CD881B4D952900385753 /* weipei_thumb.jpg */,
 			);
 			name = BirthdayPics;
 			sourceTree = "<group>";
@@ -478,6 +490,7 @@
 				68D38DA81B43BEA3009F1511 /* james_thumb.jpg in Resources */,
 				688C7DE31B49BC820009AF6D /* 威良_full.jpg in Resources */,
 				68D38DCB1B450BE6009F1511 /* wizard_full.jpg in Resources */,
+				8FF3CD891B4D952900385753 /* weipei_full.jpg in Resources */,
 				68D38DC81B450BE6009F1511 /* fei_thumb.jpg in Resources */,
 				688C7DDB1B49BA040009AF6D /* 小智土星_full.jpg in Resources */,
 				68D38DD21B4523CD009F1511 /* photography.png in Resources */,
@@ -488,6 +501,7 @@
 				68D38DB71B43C44B009F1511 /* sasalu_full.jpg in Resources */,
 				688C7DD01B479D690009AF6D /* words.png in Resources */,
 				68D38DBC1B43C44B009F1511 /* 雄_thumb.jpg in Resources */,
+				8FF3CD851B4D93C700385753 /* 雅芬姊_full.jpg in Resources */,
 				8F4FE2A91B4C4FE0008AC2D9 /* jasonbill_full.jpg in Resources */,
 				68D38DA11B43ADE3009F1511 /* facade_circle.png in Resources */,
 				688C7DD71B48FCAA0009AF6D /* 許栩_full.jpg in Resources */,
@@ -505,6 +519,7 @@
 				68D38D9D1B427E07009F1511 /* timw_thumb.jpg in Resources */,
 				8F8E698D1B4AF12C0007836D /* birdway_thumb.jpg in Resources */,
 				68D38DD31B4523CD009F1511 /* refresh.png in Resources */,
+				8FF3CD8A1B4D952900385753 /* weipei_thumb.jpg in Resources */,
 				8F8E699D1B4B00630007836D /* derek_thumb.jpg in Resources */,
 				8F4FE2C01B4C749B008AC2D9 /* york_thumb.jpg in Resources */,
 				8F4FE2AE1B4C5060008AC2D9 /* 六_thumb.jpg in Resources */,
@@ -533,6 +548,7 @@
 				68D38DB91B43C44B009F1511 /* YY_full.jpg in Resources */,
 				8F4FE2BF1B4C749B008AC2D9 /* york_full.jpg in Resources */,
 				68D38DC01B43D9C6009F1511 /* janet_thumb.jpg in Resources */,
+				8FF3CD861B4D93C700385753 /* 雅芬姊_thumb.jpg in Resources */,
 				8F8E698F1B4AF12C0007836D /* dot_thumb.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
