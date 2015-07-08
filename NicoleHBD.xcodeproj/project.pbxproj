@@ -89,6 +89,8 @@
 		8F8E69991B4AF5A80007836D /* rhyme_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E69951B4AF5A80007836D /* rhyme_thumb.jpg */; };
 		8F8E699C1B4B00630007836D /* derek_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E699A1B4B00630007836D /* derek_full.jpg */; };
 		8F8E699D1B4B00630007836D /* derek_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F8E699B1B4B00630007836D /* derek_thumb.jpg */; };
+		8FC487181B4DD378005DA829 /* chihyang_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FC487161B4DD378005DA829 /* chihyang_full.jpg */; };
+		8FC487191B4DD378005DA829 /* chihyang_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FC487171B4DD378005DA829 /* chihyang_thumb.jpg */; };
 		8FF3CD851B4D93C700385753 /* 雅芬姊_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF3CD831B4D93C700385753 /* 雅芬姊_full.jpg */; };
 		8FF3CD861B4D93C700385753 /* 雅芬姊_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF3CD841B4D93C700385753 /* 雅芬姊_thumb.jpg */; };
 		8FF3CD891B4D952900385753 /* weipei_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8FF3CD871B4D952900385753 /* weipei_full.jpg */; };
@@ -203,6 +205,8 @@
 		8F8E69951B4AF5A80007836D /* rhyme_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rhyme_thumb.jpg; path = BirthdayPics/rhyme_thumb.jpg; sourceTree = "<group>"; };
 		8F8E699A1B4B00630007836D /* derek_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = derek_full.jpg; path = BirthdayPics/derek_full.jpg; sourceTree = "<group>"; };
 		8F8E699B1B4B00630007836D /* derek_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = derek_thumb.jpg; path = BirthdayPics/derek_thumb.jpg; sourceTree = "<group>"; };
+		8FC487161B4DD378005DA829 /* chihyang_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = chihyang_full.jpg; path = BirthdayPics/chihyang_full.jpg; sourceTree = "<group>"; };
+		8FC487171B4DD378005DA829 /* chihyang_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = chihyang_thumb.jpg; path = BirthdayPics/chihyang_thumb.jpg; sourceTree = "<group>"; };
 		8FF3CD831B4D93C700385753 /* 雅芬姊_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "雅芬姊_full.jpg"; path = "BirthdayPics/雅芬姊_full.jpg"; sourceTree = "<group>"; };
 		8FF3CD841B4D93C700385753 /* 雅芬姊_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "雅芬姊_thumb.jpg"; path = "BirthdayPics/雅芬姊_thumb.jpg"; sourceTree = "<group>"; };
 		8FF3CD871B4D952900385753 /* weipei_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = weipei_full.jpg; path = BirthdayPics/weipei_full.jpg; sourceTree = "<group>"; };
@@ -391,6 +395,8 @@
 				8FF3CD841B4D93C700385753 /* 雅芬姊_thumb.jpg */,
 				8FF3CD871B4D952900385753 /* weipei_full.jpg */,
 				8FF3CD881B4D952900385753 /* weipei_thumb.jpg */,
+				8FC487161B4DD378005DA829 /* chihyang_full.jpg */,
+				8FC487171B4DD378005DA829 /* chihyang_thumb.jpg */,
 			);
 			name = BirthdayPics;
 			sourceTree = "<group>";
@@ -531,6 +537,7 @@
 				8F8E69991B4AF5A80007836D /* rhyme_thumb.jpg in Resources */,
 				68D38D9C1B427E07009F1511 /* timw_full.jpg in Resources */,
 				68D38DC91B450BE6009F1511 /* wind_full.jpg in Resources */,
+				8FC487191B4DD378005DA829 /* chihyang_thumb.jpg in Resources */,
 				8F8E698C1B4AF12C0007836D /* birdway_full.jpg in Resources */,
 				688C7DE41B49BC820009AF6D /* 威良_thumb.jpg in Resources */,
 				68D38DBA1B43C44B009F1511 /* YY_thumb.jpg in Resources */,
@@ -543,6 +550,7 @@
 				8F8E69971B4AF5A80007836D /* chihying_thumb.jpg in Resources */,
 				68D38DCC1B450BE6009F1511 /* wizard_thumb.jpg in Resources */,
 				688C7DCC1B4798FF0009AF6D /* joyceasd_thumb.jpg in Resources */,
+				8FC487181B4DD378005DA829 /* chihyang_full.jpg in Resources */,
 				688C7DC41B467E790009AF6D /* zoom-in.png in Resources */,
 				8F8E69981B4AF5A80007836D /* rhyme_full.jpg in Resources */,
 				68D38DB91B43C44B009F1511 /* YY_full.jpg in Resources */,
