@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		682C375E1B4E5DFE0016C01C /* fanwei_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682C375C1B4E5DFE0016C01C /* fanwei_full.jpg */; };
+		682C375F1B4E5DFE0016C01C /* fanwei_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682C375D1B4E5DFE0016C01C /* fanwei_thumb.jpg */; };
+		682C37621B4E5F300016C01C /* zhouzhou_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682C37601B4E5F300016C01C /* zhouzhou_full.jpg */; };
+		682C37631B4E5F300016C01C /* zhouzhou_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682C37611B4E5F300016C01C /* zhouzhou_thumb.jpg */; };
 		688C7DC41B467E790009AF6D /* zoom-in.png in Resources */ = {isa = PBXBuildFile; fileRef = 688C7DC31B467E790009AF6D /* zoom-in.png */; };
 		688C7DC71B467FD70009AF6D /* ZoomZoomPicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 688C7DC61B467FD70009AF6D /* ZoomZoomPicView.m */; };
 		688C7DCB1B4798FF0009AF6D /* joyceasd_full.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 688C7DC91B4798FF0009AF6D /* joyceasd_full.jpg */; };
@@ -108,6 +112,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		682C375C1B4E5DFE0016C01C /* fanwei_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fanwei_full.jpg; path = BirthdayPics/fanwei_full.jpg; sourceTree = "<group>"; };
+		682C375D1B4E5DFE0016C01C /* fanwei_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fanwei_thumb.jpg; path = BirthdayPics/fanwei_thumb.jpg; sourceTree = "<group>"; };
+		682C37601B4E5F300016C01C /* zhouzhou_full.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = zhouzhou_full.jpg; path = BirthdayPics/zhouzhou_full.jpg; sourceTree = "<group>"; };
+		682C37611B4E5F300016C01C /* zhouzhou_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = zhouzhou_thumb.jpg; path = BirthdayPics/zhouzhou_thumb.jpg; sourceTree = "<group>"; };
 		688C7DC31B467E790009AF6D /* zoom-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zoom-in.png"; sourceTree = SOURCE_ROOT; };
 		688C7DC51B467FD70009AF6D /* ZoomZoomPicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomZoomPicView.h; sourceTree = "<group>"; };
 		688C7DC61B467FD70009AF6D /* ZoomZoomPicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomZoomPicView.m; sourceTree = "<group>"; };
@@ -397,6 +405,10 @@
 				8FF3CD881B4D952900385753 /* weipei_thumb.jpg */,
 				8FC487161B4DD378005DA829 /* chihyang_full.jpg */,
 				8FC487171B4DD378005DA829 /* chihyang_thumb.jpg */,
+				682C375C1B4E5DFE0016C01C /* fanwei_full.jpg */,
+				682C375D1B4E5DFE0016C01C /* fanwei_thumb.jpg */,
+				682C37601B4E5F300016C01C /* zhouzhou_full.jpg */,
+				682C37611B4E5F300016C01C /* zhouzhou_thumb.jpg */,
 			);
 			name = BirthdayPics;
 			sourceTree = "<group>";
@@ -494,6 +506,7 @@
 				68D38DB51B43C44B009F1511 /* pat_full.jpg in Resources */,
 				68D38DB61B43C44B009F1511 /* pat_thumb.jpg in Resources */,
 				68D38DA81B43BEA3009F1511 /* james_thumb.jpg in Resources */,
+				682C375E1B4E5DFE0016C01C /* fanwei_full.jpg in Resources */,
 				688C7DE31B49BC820009AF6D /* 威良_full.jpg in Resources */,
 				68D38DCB1B450BE6009F1511 /* wizard_full.jpg in Resources */,
 				8FF3CD891B4D952900385753 /* weipei_full.jpg in Resources */,
@@ -505,6 +518,7 @@
 				688C7DDC1B49BA040009AF6D /* 小智土星_thumb.jpg in Resources */,
 				688C7DF11B4A118D0009AF6D /* davidlin_thumb.jpg in Resources */,
 				68D38DB71B43C44B009F1511 /* sasalu_full.jpg in Resources */,
+				682C375F1B4E5DFE0016C01C /* fanwei_thumb.jpg in Resources */,
 				688C7DD01B479D690009AF6D /* words.png in Resources */,
 				68D38DBC1B43C44B009F1511 /* 雄_thumb.jpg in Resources */,
 				8FF3CD851B4D93C700385753 /* 雅芬姊_full.jpg in Resources */,
@@ -532,6 +546,7 @@
 				688C7DD81B48FCAA0009AF6D /* 許栩_thumb.jpg in Resources */,
 				8F4FE2AA1B4C4FE0008AC2D9 /* jasonbill_thumb.jpg in Resources */,
 				688C7DCF1B479D690009AF6D /* dismiss.png in Resources */,
+				682C37621B4E5F300016C01C /* zhouzhou_full.jpg in Resources */,
 				6897B7781B3A846300C79DE2 /* LaunchScreen.xib in Resources */,
 				8F8E699C1B4B00630007836D /* derek_full.jpg in Resources */,
 				8F8E69991B4AF5A80007836D /* rhyme_thumb.jpg in Resources */,
@@ -539,6 +554,7 @@
 				68D38DC91B450BE6009F1511 /* wind_full.jpg in Resources */,
 				8FC487191B4DD378005DA829 /* chihyang_thumb.jpg in Resources */,
 				8F8E698C1B4AF12C0007836D /* birdway_full.jpg in Resources */,
+				682C37631B4E5F300016C01C /* zhouzhou_thumb.jpg in Resources */,
 				688C7DE41B49BC820009AF6D /* 威良_thumb.jpg in Resources */,
 				68D38DBA1B43C44B009F1511 /* YY_thumb.jpg in Resources */,
 				688C7DCB1B4798FF0009AF6D /* joyceasd_full.jpg in Resources */,
